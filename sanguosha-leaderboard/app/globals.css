@@ -1,0 +1,35 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+@layer base {
+  body {
+    @apply bg-sgs-bg text-sgs-parchment antialiased min-h-screen;
+  }
+}
+
+@layer components {
+  .sgs-card {
+    @apply bg-sgs-card border border-sgs-border rounded-lg shadow-lg;
+  }
+
+  .sgs-btn {
+    @apply inline-flex items-center justify-center rounded-md px-4 py-2 text-sm font-medium transition-colors disabled:opacity-50 disabled:pointer-events-none;
+  }
+
+  .sgs-btn-primary {
+    @apply sgs-btn bg-sgs-red hover:bg-sgs-red-light text-white border border-sgs-gold/40;
+  }
+
+  .sgs-btn-secondary {
+    @apply sgs-btn bg-sgs-card hover:bg-sgs-border/30 text-sgs-parchment border border-sgs-border;
+  }
+
+  .sgs-input {
+    @apply w-full rounded-md border border-sgs-border bg-sgs-bg px-3 py-2 text-sgs-parchment placeholder:text-sgs-muted focus:border-sgs-gold focus:outline-none focus:ring-1 focus:ring-sgs-gold;
+  }
+
+  .sgs-label {
+    @apply block text-sm text-sgs-muted mb-1;
+  }
+}
