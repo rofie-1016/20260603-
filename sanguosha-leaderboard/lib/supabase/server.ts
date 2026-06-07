@@ -15,7 +15,7 @@ function emptyPayload(): AppData {
 }
 
 export function createAdminClient(): SupabaseClient {
-  const url = normalizeSupabaseUrl(process.env.SUPABASE_URL);
+   const url = normalizeSupabaseUrl(process.env.SUPABASE_URL ?? "");
   const key = process.env.SUPABASE_SERVICE_ROLE_KEY;
   if (!url || !key) {
     throw new Error("未配置 SUPABASE_URL 或 SUPABASE_SERVICE_ROLE_KEY");
